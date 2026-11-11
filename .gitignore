@@ -1,0 +1,33 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.pytest_cache/
+
+# Ambientes virtuais
+venv/
+.venv/
+env/
+
+# Arquivos temporários
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# Segredos e credenciais
+.env
+.env.*
+!.env.example
+secrets.yml
+secrets.yaml
+
+# Dados locais e backups
+*.backup
+*.bak
+data/local/
