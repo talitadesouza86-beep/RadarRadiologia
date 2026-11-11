@@ -1,0 +1,32 @@
+
+project:
+  name: Radar Radiologia
+  region: Campinas e cidades próximas
+  state: SP
+  country: BR
+
+cities:
+  - Campinas
+  - Sumaré
+  - Hortolândia
+  - Paulínia
+  - Valinhos
+  - Vinhedo
+  - Indaiatuba
+  - Americana
+  - Nova Odessa
+  - Santa Bárbara d'Oeste
+  - Monte Mor
+  - Jaguariúna
+  - Cosmópolis
+  - Pedreira
+  - Itatiba
+  - Holambra
+  - Limeira
+  - Piracicaba
+  - Jundiaí
+
+settings:
+  enabled: true
+  include_state_capital: false
+  state: SP
