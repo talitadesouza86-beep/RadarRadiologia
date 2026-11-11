@@ -37,8 +37,8 @@ sources:
     source_type: official
     verify_original_source: true
 
-  - name: FASCAMP
-    url: https://fascamp.selecao.net.br/
+   - name: FASCAMP
+    url: https://fascamp.org.br/processos-seletivos/
     category: processo_seletivo
     priority: high
     enabled: true
