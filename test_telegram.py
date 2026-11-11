@@ -4,7 +4,6 @@ import os
 
 from telegram_bot import get_chat_ids, send_message
 
-
 logging.basicConfig(level=logging.INFO)
 
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
@@ -25,7 +24,7 @@ def main():
         "Teste de conexão realizado com sucesso!\n\n"
         "Este é o canal oficial de notificações de concursos "
         "e vagas de emprego para Técnico em Radiologia.\n\n"
-        "Em breve, vocês receberão as novas oportunidades por aqui! 🚀"
+        "Em breve, vocês receberão novas oportunidades por aqui! 🚀"
     )
 
     successes = 0
@@ -33,9 +32,9 @@ def main():
     for chat_id in CHAT_IDS:
         if send_message(chat_id, message, TOKEN):
             successes += 1
-            print(f"Mensagem enviada com sucesso para o ID {chat_id}.")
+            print("Mensagem enviada com sucesso.")
         else:
-            print(f"Falha no envio para o ID {chat_id}.")
+            print("Falha no envio para um dos usuários.")
 
     if successes != len(CHAT_IDS):
         raise RuntimeError(
