@@ -1,7 +1,6 @@
-
 project:
   name: Radar Radiologia
-  region: Campinas e cidades próximas
+  region: Campinas e região
   state: SP
   country: BR
 
