@@ -1,4 +1,3 @@
-
 keywords:
   exact_match:
     - Técnico em Radiologia
@@ -6,12 +5,16 @@ keywords:
     - Técnico de Radiologia
     - Técnica de Radiologia
     - Técnico em Raio X
+    - Técnica em Raio X
     - Técnico de Raio X
+    - Técnica de Raio X
     - Técnico em Raios X
     - Técnica em Raios X
-
-  related_match:
+    - Técnico de Raios X
     - Técnico em Radiodiagnóstico
+    - Técnica em Radiodiagnóstico
+    - Técnico de Radiodiagnóstico
+  related_match:
     - Técnico em Mamografia
     - Técnico de Mamografia
     - Técnico em Tomografia
@@ -19,55 +22,32 @@ keywords:
     - Técnico em Ressonância Magnética
     - Técnico de Ressonância Magnética
     - Técnico em Diagnóstico por Imagem
-
-  additional_search_terms:
-    - Radiologia
-    - Radiodiagnóstico
-    - Raio X
-    - Raios X
-    - Mamografia
-    - Tomografia
-    - Ressonância Magnética
-    - Diagnóstico por Imagem
-
-filters:
+    - Técnico de Diagnóstico por Imagem
+    - Operador de Raio X
+    - Operador de Raios X
   accepted_education:
-    - Técnico em Radiologia
-    - Curso Técnico em Radiologia
-    - Formação Técnica em Radiologia
-    - Técnico em Radiodiagnóstico
-
+    - técnico em radiologia
+    - curso técnico em radiologia
+    - formação técnica em radiologia
+    - técnico em radiodiagnóstico
   excluded_when_exclusive:
-    - Tecnólogo em Radiologia
-    - Biomédico
-    - Médico Radiologista
-    - Graduação em Biomedicina
-    - Ensino Superior em Radiologia
-
+    - tecnólogo em radiologia
+    - biomédico
+    - biomedicina
+    - médico radiologista
+    - graduação em radiologia
+    - ensino superior em radiologia
+  service_exclusions:
+    - contratação de empresa especializada
+    - prestação de serviços por pessoa jurídica
+    - credenciamento de pessoa jurídica
   review_required:
-    - Auxiliar de Radiologia
-    - Auxiliar de Diagnóstico por Imagem
-    - Operador de Equipamentos de Imagem
-
-classification:
-  exact_match:
-    priority: 1
-    automatic_approval: true
-
-  related_match:
-    priority: 2
-    require_technical_qualification: true
-
-  review_required:
-    priority: 3
-    automatic_approval: false
-
-  excluded:
-    priority: 4
-    automatic_approval: false
+    - auxiliar de radiologia
+    - auxiliar de diagnóstico por imagem
+    - operador de equipamentos de imagem
 
 settings:
   ignore_case: true
   ignore_accents: true
   require_radiology_context: true
-  reject_higher_education_exclusive: true
+  related_terms_require_technical_qualification: true
