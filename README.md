@@ -1,66 +1,35 @@
-# RadarRadiologia
-Monitoramento de concursos e vagas de emprego para Técnico em Radiologia na região de Campinas
+# Radar Radiologia
 
-# 🩻 Radar Radiologia
+Radar de concursos, processos seletivos e vagas de emprego para Técnico em Radiologia na região de Campinas/SP.
 
-Sistema automatizado de monitoramento de concursos públicos, processos seletivos e vagas de emprego para profissionais com formação técnica em Radiologia.
+## Cidades monitoradas
+Campinas, Sumaré, Hortolândia, Paulínia, Valinhos, Vinhedo, Indaiatuba, Americana, Nova Odessa, Santa Bárbara d'Oeste, Monte Mor, Jaguariúna, Cosmópolis, Pedreira, Itatiba, Holambra, Limeira, Piracicaba e Jundiaí.
 
-## 📍 Região monitorada
+## O que procura
+- Concursos públicos, processos seletivos, contratações temporárias e cadastro reserva.
+- Vagas privadas em hospitais, clínicas, centros de diagnóstico por imagem e medicina ocupacional.
+- Técnico em Radiologia, Técnico de Raio X e funções técnicas correlatas.
+- Mamografia, tomografia, ressonância e radiodiagnóstico quando a formação técnica em Radiologia for aceita.
 
-Campinas e cidades próximas, no estado de São Paulo.
+## Fontes configuradas
+PCI Concursos, Concursos no Brasil, JC Concursos, FUNCAMP, FASCAMP, Prefeitura de Campinas, CISMETRO, VUNESP, Indeed, LinkedIn, Gupy, InfoJobs, Catho, Trabalha Brasil, Grupo Diagmed, Hospital Vera Cruz e Hospital PUC-Campinas. Há também pesquisa complementar por Bing RSS.
 
-## 🎯 O que o Radar monitora?
+**Limitação importante:** os sites mudam, bloqueiam robôs e podem exigir JavaScript/login. Os agregadores são pistas; o anúncio original precisa ser conferido. Fonte indisponível é registrada como falha, não como ausência de vagas. PDFs digitalizados sem texto selecionável não são lidos por OCR nesta versão.
 
-- Concursos públicos;
-- Processos seletivos;
-- Contratações temporárias;
-- Cadastro reserva;
-- Vagas de emprego em hospitais;
-- Clínicas e centros de diagnóstico por imagem;
-- Oportunidades para profissionais recém-formados.
+## Telegram
+Secrets do GitHub:
+- `TELEGRAM_BOT_TOKEN`
+- `TELEGRAM_CHAT_IDS` — IDs separados por vírgula.
 
-## 🔎 Cargos monitorados
+Cada pessoa deve abrir o bot e enviar `/start`.
 
-- Técnico em Radiologia;
-- Técnico de Radiologia;
-- Técnico em Radiodiagnóstico;
-- Técnico em Mamografia;
-- Técnico em Tomografia;
-- Técnico em Ressonância Magnética;
-- Técnico em Raio X.
+O sistema conserva histórico, evita duplicatas e só notifica itens classificados como verificados. Candidatas incertas ficam pendentes de revisão.
 
-O sistema deverá verificar se a formação técnica em Radiologia é aceita, evitando oportunidades exclusivas para tecnólogos, biomédicos ou profissionais de outras formações.
+## Execução
+```bash
+python -m pip install -r requirements.txt
+python radar.py
+```
 
-## 📲 Notificações no Telegram
-
-As notificações serão enviadas para múltiplos usuários.
-
-Formato padrão:
-
-🩻 RADAR RADIOLOGIA
-
-Vaga: Técnico em Radiologia  
-Local: Campinas – SP  
-Inscrições: 10/11/2026 a 25/11/2026  
-🔗 Link direto para o edital ou candidatura
-
-## ⚙️ Funcionamento
-
-- Monitoramento automatizado das fontes;
-- Verificação da publicação original;
-- Identificação de novas oportunidades;
-- Controle de duplicidade;
-- Exclusão de oportunidades expiradas;
-- Notificações somente de novas oportunidades verificadas.
-
-## 🛠️ Tecnologias
-
-- Python
-- GitHub Actions
-- Telegram Bot API
-- YAML
-- JSON
-
----
-
-Projeto independente desenvolvido para facilitar o acompanhamento de oportunidades profissionais na área de Radiologia.
+## Agendamento
+O workflow principal executa três vezes ao dia (UTC), além de permitir execução manual.
