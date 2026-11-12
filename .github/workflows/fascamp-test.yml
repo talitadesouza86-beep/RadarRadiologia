@@ -7,47 +7,19 @@ permissions:
   contents: read
 
 jobs:
-  testar-fascamp:
-    name: Consultar processos seletivos da FASCAMP
+  testar:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Baixar repositório
-        uses: actions/checkout@v4
-
-      - name: Configurar Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
       - name: Instalar dependências
+        run: pip install -r requirements.txt
+      - name: Executar coletor
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Executar coletor FASCAMP
-        run: python collectors/fascamp.py
-
-      - name: Exibir oportunidades encontradas
-        run: |
-          python -c "
-          import json
-          from pathlib import Path
-
-          path = Path('data/fascamp_candidates.json')
-          data = json.loads(path.read_text(encoding='utf-8'))
-
-          print('Total de candidatas:', data['total_found'])
-
-          for item in data['opportunities']:
-              print('------------------------------')
-              print('Vaga:', item['title'])
-              print('Cidade:', item['city'])
-              print('Inscrições:', item['application_date'])
-              print('Link:', item['application_url'])
-          "
-
-      - name: Salvar resultado como artefato
+          python -c "from collectors.fascamp import collect; from radar import load_settings; import json; from pathlib import Path; s=load_settings(); x=collect(s); Path('data/fascamp_candidates.json').write_text(json.dumps({'total_found':len(x),'opportunities':x},ensure_ascii=False,indent=2),encoding='utf-8'); print('Total de candidatas:',len(x))"
+      - name: Salvar resultado
         uses: actions/upload-artifact@v4
         with:
           name: resultado-fascamp
