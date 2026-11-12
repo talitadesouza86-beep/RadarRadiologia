@@ -1,6 +1,123 @@
 {
-  "last_update": null,
-  "total_found": 0,
-  "opportunities": [],
-  "source_runs": []
+  "last_update": "2026-11-12T14:55:01.245028-03:00",
+  "total_found": 1,
+  "new_candidates_this_run": 1,
+  "notifications_sent": 0,
+  "source_runs": [
+    {
+      "source": "FASCAMP",
+      "status": "success",
+      "candidates": 1
+    },
+    {
+      "source": "PCI Concursos",
+      "status": "success",
+      "candidates": 0
+    },
+    {
+      "source": "Concursos no Brasil",
+      "status": "success",
+      "candidates": 0
+    },
+    {
+      "source": "JC Concursos",
+      "status": "success",
+      "candidates": 0
+    },
+    {
+      "source": "FUNCAMP",
+      "status": "success",
+      "candidates": 0
+    },
+    {
+      "source": "Prefeitura de Campinas",
+      "status": "success",
+      "candidates": 0
+    },
+    {
+      "source": "CISMETRO",
+      "status": "success",
+      "candidates": 0
+    },
+    {
+      "source": "VUNESP",
+      "status": "success",
+      "candidates": 0
+    },
+    {
+      "source": "Indeed",
+      "status": "success",
+      "candidates": 0
+    },
+    {
+      "source": "LinkedIn",
+      "status": "success",
+      "candidates": 0
+    },
+    {
+      "source": "Gupy",
+      "status": "success",
+      "candidates": 0
+    },
+    {
+      "source": "InfoJobs",
+      "status": "success",
+      "candidates": 0
+    },
+    {
+      "source": "Catho",
+      "status": "success",
+      "candidates": 0
+    },
+    {
+      "source": "Trabalha Brasil",
+      "status": "success",
+      "candidates": 0
+    },
+    {
+      "source": "Grupo Diagmed",
+      "status": "success",
+      "candidates": 0
+    },
+    {
+      "source": "Hospital Vera Cruz",
+      "status": "success",
+      "candidates": 0
+    },
+    {
+      "source": "Hospital PUC-Campinas",
+      "status": "success",
+      "candidates": 0
+    },
+    {
+      "source": "Bing RSS",
+      "status": "success",
+      "candidates": 0
+    }
+  ],
+  "opportunities": [
+    {
+      "source": "FASCAMP",
+      "title": "Edital nº 09/2025 – Técnico de Radiologia – Hospital Regional de Piracicaba",
+      "city": "Campinas",
+      "state": "SP",
+      "category": "processo_seletivo",
+      "application_date": "Prazo não informado",
+      "application_url": "https://fascamp.org.br/editais/edital-no-09-2025-tecnico-de-radiologia-hospital-regional-de-piracicaba/",
+      "document_url": "https://fascamp.org.br/wp-content/uploads/2025/03/Edital-09.2025.pdf",
+      "matched_terms": [
+        "Técnico em Radiologia",
+        "Técnico de Radiologia"
+      ],
+      "deadline_status": "review",
+      "verification_status": "pending_review",
+      "status": "pending_review",
+      "collected_at": "2026-11-12T17:58:26.859791+00:00",
+      "fingerprint": "2c526a6b4a959b0cb09878b8222a823b78eaf7bb1a46858f0ca98dddccd96753",
+      "first_seen": "2026-11-12T14:55:01.245028-03:00",
+      "last_seen": "2026-11-12T14:55:01.245028-03:00",
+      "notified": false,
+      "notified_at": null
+    }
+  ]
 }
