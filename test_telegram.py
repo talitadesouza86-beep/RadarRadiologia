@@ -1,48 +1,21 @@
-
-import logging
 import os
+from telegram_bot import send_message, get_chat_ids
 
-from telegram_bot import get_chat_ids, send_message
+token = os.getenv("TELEGRAM_BOT_TOKEN")
+ids = get_chat_ids()
+if not token:
+    raise SystemExit("Secret TELEGRAM_BOT_TOKEN não configurado.")
+if not ids:
+    raise SystemExit("Secret TELEGRAM_CHAT_IDS não configurado.")
 
-logging.basicConfig(level=logging.INFO)
+message = "🩻 RADAR RADIOLOGIA\nTeste de conexão concluído!"
+success = 0
+for chat_id in ids:
+    try:
+        success += int(send_message(chat_id, message, token))
+    except Exception as exc:
+        print(f"Falha no envio: {exc}")
 
-TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-CHAT_IDS = get_chat_ids()
-
-
-def main():
-    if not TOKEN:
-        raise RuntimeError("Secret TELEGRAM_BOT_TOKEN não encontrado.")
-
-    if len(CHAT_IDS) < 2:
-        raise RuntimeError(
-            "Esperados pelo menos dois IDs em TELEGRAM_CHAT_IDS."
-        )
-
-    message = (
-        "🩻 RADAR RADIOLOGIA\n\n"
-        "Teste de conexão realizado com sucesso!\n\n"
-        "Este é o canal oficial de notificações de concursos "
-        "e vagas de emprego para Técnico em Radiologia.\n\n"
-        "Em breve, vocês receberão novas oportunidades por aqui! 🚀"
-    )
-
-    successes = 0
-
-    for chat_id in CHAT_IDS:
-        if send_message(chat_id, message, TOKEN):
-            successes += 1
-            print("Mensagem enviada com sucesso.")
-        else:
-            print("Falha no envio para um dos usuários.")
-
-    if successes != len(CHAT_IDS):
-        raise RuntimeError(
-            f"Somente {successes} de {len(CHAT_IDS)} envios tiveram sucesso."
-        )
-
-    print("Todos os testes foram concluídos com sucesso!")
-
-
-if __name__ == "__main__":
-    main()
+print(f"Mensagens entregues: {success} de {len(ids)}")
+if success != len(ids):
+    raise SystemExit("Um ou mais envios falharam.")
