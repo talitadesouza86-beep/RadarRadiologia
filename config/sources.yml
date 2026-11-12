@@ -1,163 +1,96 @@
-
 sources:
-
-  # ==========================================
-  # CONCURSOS E PROCESSOS SELETIVOS
-  # ==========================================
-
   - name: PCI Concursos
-    url: https://www.pciconcursos.com.br/
+    url: https://www.pciconcursos.com.br/concursos/
     category: concurso
-    priority: high
-    enabled: true
     source_type: aggregator
-    verify_original_source: true
-
+    enabled: true
   - name: Concursos no Brasil
-    url: https://concursosnobrasil.com/
+    url: https://concursosnobrasil.com/concursos/
     category: concurso
-    priority: high
-    enabled: true
     source_type: aggregator
-    verify_original_source: true
-
+    enabled: true
   - name: JC Concursos
-    url: https://jcconcursos.com.br/
+    url: https://jcconcursos.com.br/concursos
     category: concurso
-    priority: high
-    enabled: true
     source_type: aggregator
-    verify_original_source: true
-
+    enabled: true
   - name: FUNCAMP
     url: https://www.funcamp.unicamp.br/portal/ProcessoSeletivo/
     category: processo_seletivo
-    priority: high
-    enabled: true
     source_type: official
-    verify_original_source: true
-
-   - name: FASCAMP
+    enabled: true
+  - name: FASCAMP
     url: https://fascamp.org.br/processos-seletivos/
     category: processo_seletivo
-    priority: high
-    enabled: true
     source_type: official
-    verify_original_source: true
-
+    enabled: true
   - name: Prefeitura de Campinas
-    url: https://campinas.sp.gov.br/sites/concursos/
+    url: https://www.campinas.sp.gov.br/
     category: concurso
-    priority: high
-    enabled: true
     source_type: official
-    verify_original_source: true
-
+    enabled: true
   - name: CISMETRO
-    url: https://www.cismetro.com.br/publicacoes/
+    url: https://www.cismetro.com.br/
     category: processo_seletivo
-    priority: high
-    enabled: true
     source_type: official
-    verify_original_source: true
-
+    enabled: true
   - name: VUNESP
     url: https://www.vunesp.com.br/
     category: concurso
-    priority: medium
+    source_type: official
     enabled: true
-    source_type: organizer
-    verify_original_source: true
-
-  # ==========================================
-  # PLATAFORMAS DE EMPREGO
-  # ==========================================
-
   - name: Indeed
     url: https://br.indeed.com/
     category: emprego
-    priority: high
+    source_type: aggregator
     enabled: true
-    source_type: job_aggregator
-    verify_original_source: true
-
   - name: LinkedIn
     url: https://www.linkedin.com/jobs/
     category: emprego
-    priority: high
+    source_type: aggregator
     enabled: true
-    source_type: job_aggregator
-    verify_original_source: true
-
   - name: Gupy
     url: https://portal.gupy.io/
     category: emprego
-    priority: high
+    source_type: aggregator
     enabled: true
-    source_type: job_platform
-    verify_original_source: true
-
   - name: InfoJobs
     url: https://www.infojobs.com.br/
     category: emprego
-    priority: medium
+    source_type: aggregator
     enabled: true
-    source_type: job_aggregator
-    verify_original_source: true
-
   - name: Catho
     url: https://www.catho.com.br/
     category: emprego
-    priority: medium
+    source_type: aggregator
     enabled: true
-    source_type: job_aggregator
-    verify_original_source: true
-
   - name: Trabalha Brasil
     url: https://www.trabalhabrasil.com.br/
     category: emprego
-    priority: medium
+    source_type: aggregator
     enabled: true
-    source_type: job_aggregator
-    verify_original_source: true
-
-  # ==========================================
-  # HOSPITAIS E EMPREGADORES
-  # ==========================================
-
   - name: Grupo Diagmed
-    url: https://diagmedsumare.gupy.io/
+    url: https://www.grupodiagmed.com.br/
     category: emprego
-    priority: high
+    source_type: official
     enabled: true
-    source_type: employer
-    verify_original_source: true
-
-  - name: Vera Cruz Hospital
-    url: https://veracruzhospital.gupy.io/
+  - name: Hospital Vera Cruz
+    url: https://www.hospitalveracruz.com.br/
     category: emprego
-    priority: high
+    source_type: official
     enabled: true
-    source_type: employer
-    verify_original_source: true
-
   - name: Hospital PUC-Campinas
-    url: https://www.puc-campinas.edu.br/proad/banco-de-curriculos/
+    url: https://www.hospitalpuc-campinas.com.br/
     category: emprego
-    priority: medium
+    source_type: official
     enabled: true
-    source_type: employer
-    verify_original_source: true
 
-# ==========================================
-# CONFIGURAÇÕES GERAIS
-# ==========================================
-
-settings:
-  monitor_public_jobs: true
-  monitor_private_jobs: true
-  verify_original_source: true
-  notify_only_new: true
-  avoid_duplicates: true
-  ignore_expired_opportunities: true
-  require_direct_application_link: true
+search:
+  bing_rss_enabled: true
+  max_results_per_query: 12
+  queries:
+    - '"Técnico em Radiologia"'
+    - '"Técnico de Raio X"'
+    - '"Técnico em Radiodiagnóstico"'
+    - '"Técnico em Mamografia"'
+    - '"Técnico em Tomografia"'
