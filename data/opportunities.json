@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-11-13T08:48:23.828657-03:00",
+  "last_update": "2026-11-13T14:42:56.900741-03:00",
   "total_found": 1,
   "new_candidates_this_run": 0,
   "notifications_sent": 0,
@@ -112,10 +112,10 @@
       "deadline_status": "review",
       "verification_status": "pending_review",
       "status": "pending_review",
-      "collected_at": "2026-11-13T11:52:25.916095+00:00",
+      "collected_at": "2026-11-13T17:47:50.640457+00:00",
       "fingerprint": "2c526a6b4a959b0cb09878b8222a823b78eaf7bb1a46858f0ca98dddccd96753",
       "first_seen": "2026-11-12T14:55:01.245028-03:00",
-      "last_seen": "2026-11-13T08:48:23.828657-03:00",
+      "last_seen": "2026-11-13T14:42:56.900741-03:00",
       "notified": false,
       "notified_at": null
     }
